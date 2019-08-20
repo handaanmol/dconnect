@@ -4,7 +4,7 @@
   "description": "Rest Services for microservice1",
   "main": "node index.js DEV",
   "scripts": {
-    "start": "node index.js DEV",
+    "start": "node server.js DEV",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

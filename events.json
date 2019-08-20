@@ -1,0 +1,19 @@
+{
+    "events": [
+        {
+            "eventId": 1496772521967,
+            "eventName": "Happy Hours",
+            "date": "Sep 12th 2019"
+        },
+        {
+            "eventId": 1496773182421,
+            "eventName": "Pet Care",
+            "date": "Aug 26th 2019"
+        },
+        {
+            "eventId": 1496816750899,
+            "eventName": "Wellness Yoga",
+            "date": "August 29th 2019"
+        }
+    ]
+}

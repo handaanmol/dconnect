@@ -4,7 +4,7 @@ var swaggerFileName = '../public/swagger-ui/data/swagger.json';
 var swaggerJsonFile = require(swaggerFileName);
 var path = require('path');
 var bodyParser = require("body-parser");
-var orderRoute = require("../app/routes/order.route.js");
+var eventRoute = require("../app/routes/event.route.js");
 var swaggerRoute = require("../app/routes/swagger.route.js");
 var corsFilter = require("../app/routes/filters/cors.filter");
 var morganLogger = require("morgan");
@@ -16,14 +16,14 @@ var app = express();
 app.use(morganLogger('dev'));
 
 // SWAGGER IMPLEMENTATION
-app.use('/order/apis/docs', express.static('./public/swagger-ui'));
+app.use('/event/apis/docs', express.static('./public/swagger-ui'));
 var router = express.Router();
 app.use(bodyParser.json({ limit: '10mb' }));
 app.use(bodyParser.urlencoded({ limit: '10mb', "extended": false }));
 
 corsFilter(router);
 
-app.use('/order/apis', router);
+app.use('/event/apis', router);
 
 //error handler if something breaks
 app.use(function (err, req, res, next) {
@@ -45,7 +45,7 @@ var apiConfig = function () {
 
 
 //defining routes
-orderRoute.init(router);
+eventRoute.init(router);
 swaggerRoute.init(router);
 
 module.exports = apiConfig;

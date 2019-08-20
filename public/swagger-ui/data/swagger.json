@@ -4,7 +4,7 @@
         "title": "order-services",
         "description": "Microservice for placing an order in the inventory(json)",
         "version": "1.0.0",
-        "termsOfService": "https://coe.mindtree.com/coe_advwebtech/"
+        "termsOfService": ""
     },
     "host": "localhost:9002",
     "schemes": [
