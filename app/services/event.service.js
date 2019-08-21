@@ -20,7 +20,7 @@ var eventService = {
  * This method prepares the actual employee document to be stored in database.
  * @param {*event} event
  */
-function placeEvent(order) {
+function placeEvent(event) {
     return new Promise(function (resolve, reject) {
         var eventNo = new Date().getTime();
         var obj = {

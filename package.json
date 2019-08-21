@@ -1,8 +1,8 @@
 {
-  "name": "microservice1",
+  "name": "microservicea",
   "version": "1.0.0",
-  "description": "Rest Services for microservice1",
-  "main": "node index.js DEV",
+  "description": "Rest Services for microservice",
+  "main": "node server.js DEV",
   "scripts": {
     "start": "node server.js DEV",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,6 +18,6 @@
     "winston": "^2.3.1",
     "underscore": "^1.8.3"
   },
-  "author": "anmolhanda@mindtree.com",
+  "author": "anmolhanda",
   "license": "ISC"
 }

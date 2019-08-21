@@ -1,8 +1,8 @@
 {
     "swagger": "2.0",
     "info": {
-        "title": "order-services",
-        "description": "Microservice for placing an order in the inventory(json)",
+        "title": "event-services",
+        "description": "Microservice for adding an event in the inventory(json)",
         "version": "1.0.0",
         "termsOfService": ""
     },
@@ -15,10 +15,10 @@
         "application/json"
     ],
     "paths": {
-        "/order/apis/orders": {
+        "/event/apis/events": {
             "get": {
-                "summary": "get orders in inventory",
-                "description": "get orders in inventory\n",
+                "summary": "get events",
+                "description": "get events in the system \n",
                 "consumes": [
                     "application/json"
                 ],
@@ -27,11 +27,11 @@
                 ],
                 "parameters": [],
                 "tags": [
-                    "orders"
+                    "events"
                 ],
                 "responses": {
                     "200": {
-                        "description": "get orders in inventory operation in response",
+                        "description": "get events which are added in the system in response",
                         "schema": {
                             "$ref": "#/definitions/response"
                         }
@@ -45,8 +45,8 @@
                 }
             },
             "post": {
-                "summary": "placing an order in the inventory",
-                "description": "placing an order in the inventory\n",
+                "summary": "adding the event",
+                "description": "adding an event\n",
                 "consumes": [
                     "application/json"
                 ],
@@ -59,16 +59,16 @@
                         "in": "body",
                         "description": "content",
                         "schema": {
-                            "$ref": "#/definitions/placeOrder"
+                            "$ref": "#/definitions/addEvent"
                         }
                     }
                 ],
                 "tags": [
-                    "orders"
+                    "events"
                 ],
                 "responses": {
                     "200": {
-                        "description": "place an order in inventory operation response",
+                        "description": "added an event for review in the system",
                         "schema": {
                             "$ref": "#/definitions/response"
                         }
@@ -82,10 +82,10 @@
                 }
             }
         },
-        "/order/apis/orders/{id}": {
+        "/event/apis/events/{id}": {
             "get": {
-                "summary": "get order by id ",
-                "description": "get order by id \n",
+                "summary": "get event by id ",
+                "description": "get event by id \n",
                 "consumes": [
                     "application/json"
                 ],
@@ -93,17 +93,17 @@
                     "application/json"
                 ],
                 "parameters": [
-                    {   "name": "id",
+                    {   "name": "eventId",
                         "in": "path",
                         "type": "Integer"
                     }
                 ],
                 "tags": [
-                    "orders"
+                    "events"
                 ],
                 "responses": {
                     "200": {
-                        "description": "get order by order id operation response",
+                        "description": "get event by event id operation response",
                         "schema": {
                             "$ref": "#/definitions/response"
                         }
@@ -145,14 +145,14 @@
                 }
             }
         },
-        "placeOrder": {
+        "addEvent": {
             "type": "object",
             "properties": {
-                "gtin": {
-                    "type": "number"
+                "eventName": {
+                    "type": "text"
                 },
-                "orderQuantity": {
-                    "type": "number"
+                "date": {
+                    "type": "text"
                 }
             }
         }
