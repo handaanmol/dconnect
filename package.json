@@ -2,9 +2,9 @@
   "name": "microservicea",
   "version": "1.0.0",
   "description": "Rest Services for microservice",
-  "main": "node server.js DEV",
+  "main": "node server.js",
   "scripts": {
-    "start": "node server.js DEV",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

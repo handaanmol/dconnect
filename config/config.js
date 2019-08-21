@@ -47,7 +47,7 @@ var getprops = function() {
 var changeSwaggerConfigurations = function() {
     if (swaggerJsonFile.host != (getprops().swagger.host + ":" + getprops().swagger.port || swaggerJsonFile.schemes[0] != getprops().swagger.protocol)) {
         swaggerJsonFile.host = getprops().swagger.host + ":" + getprops().swagger.port;
-        swaggerJsonFile.schemes = [];
+
         swaggerJsonFile.schemes.push(getprops().swagger.protocol);
 
         fs.writeFile(swaggerFileName, JSON.stringify(swaggerJsonFile, null, 2), function(err) {
